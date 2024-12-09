@@ -21,3 +21,9 @@ Feature Analysis: features are independent variables used in the model.
 
 Data Visualization: creating graphs and other visualizations to show the logistic and decision tree models/features.
 
+Dataset Variables
+
+Screenshot 2024-12-05 at 10.51.07 PM.png Screenshot 2024-12-05 at 10.52.45 PM.png Screenshot 2024-12-05 at 10.53.40 PM.png Screenshot 2024-12-05 at 10.54.22 PM.png
+
+
+
