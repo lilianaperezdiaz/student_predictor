@@ -1,5 +1,4 @@
 # student_predictor
-Academic Achievement
 
 Project Purpose
 
@@ -21,18 +20,18 @@ Feature Analysis: features are independent variables used in the model.
 
 Libraries:
 
-# Model Evaluation, Feature Ranking and Analysis:
+Model Evaluation, Feature Ranking and Analysis:
 !pip install pydotplus
 #Import libraries
 
 import pandas as pd
 import numpy as np
 
-# Needed for Decision Tree Visualization
+Needed for Decision Tree Visualization
 import pydotplus
 from IPython.display import Image
 
-# Needed for Logistic Regression and Decision Tree Models
+Needed for Logistic Regression and Decision Tree Models
 from pathlib import Path
 from sklearn import tree
 from sklearn.tree import export_graphviz
@@ -51,7 +50,7 @@ from sklearn.datasets import load_iris (used for decision tree visualization)
 import matplotlib.pyplot as plt
 from sklearn.tree import plot_tree
 
-# Machine Learning Library and Visualizations
+Machine Learning Library and Visualizations
 from yellowbrick.features import Rank1D
 from yellowbrick.features import Rank2D 
 from yellowbrick.features import ParallelCoordinates
