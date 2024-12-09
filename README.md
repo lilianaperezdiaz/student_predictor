@@ -1,4 +1,6 @@
 # student_predictor
+Academic Achievement
+
 Project Purpose
 
 The purpose of this project is to predict academic achievement in secondary education(high school) of two Portuguese schools. This project explores the external factors that may support or hinder academic achievement.
