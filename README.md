@@ -19,13 +19,53 @@ Decision Tree: Root Nodes: entire dataset and splits based on feature significan
 
 Feature Analysis: features are independent variables used in the model.
 
+Libraries:
+
+# Model Evaluation, Feature Ranking and Analysis:
+!pip install pydotplus
+#Import libraries
+
+import pandas as pd
+import numpy as np
+
+# Needed for Decision Tree Visualization
+import pydotplus
+from IPython.display import Image
+
+# Needed for Logistic Regression and Decision Tree Models
+from pathlib import Path
+from sklearn import tree
+from sklearn.tree import export_graphviz
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_auc_score
+from imblearn.over_sampling import SMOTE
+from sklearn.utils.class_weight import compute_class_weight
+from sklearn.preprocessing import MinMaxScaler,StandardScaler
+from sklearn.linear_model import LogisticRegression 
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.datasets import load_iris (used for decision tree visualization)
+%matplotlib inline
+
+import matplotlib.pyplot as plt
+from sklearn.tree import plot_tree
+
+# Machine Learning Library and Visualizations
+from yellowbrick.features import Rank1D
+from yellowbrick.features import Rank2D 
+from yellowbrick.features import ParallelCoordinates
+from yellowbrick.classifier import ClassificationReport
+from yellowbrick.features import RadViz
+from yellowbrick.features import JointPlotVisualizer
+from yellowbrick.features import PCADecomposition
+from yellowbrick.features import FeatureImportances
+
+
 Data Visualization: creating graphs and other visualizations to show the logistic and decision tree models/features.
 
 Dataset Variables
+Can someone include screenshots from the UCI website about the variables? website:https://archive.ics.uci.edu/dataset/320/student+performance
 
-![Screenshot 2024-12-05 at 10.51.07 PM.png](attachment:55b2a3fd-0377-467d-b758-44f9281092ff.png)
-![Screenshot 2024-12-05 at 10.52.45 PM.png](attachment:20b893b4-0e39-4aff-81aa-9e4cb124d861.png)
-![Screenshot 2024-12-05 at 10.53.40 PM.png](attachment:338f7307-8696-4a42-b5a5-27441da3b75a.png)
-![Screenshot 2024-12-05 at 10.54.22 PM.png](attachment:5abbd886-46c3-40bd-828e-960e32438e25.png)
 
 
