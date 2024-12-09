@@ -23,7 +23,9 @@ Data Visualization: creating graphs and other visualizations to show the logisti
 
 Dataset Variables
 
-Screenshot 2024-12-05 at 10.51.07 PM.png Screenshot 2024-12-05 at 10.52.45 PM.png Screenshot 2024-12-05 at 10.53.40 PM.png Screenshot 2024-12-05 at 10.54.22 PM.png
-
+![Screenshot 2024-12-05 at 10.51.07 PM.png](attachment:55b2a3fd-0377-467d-b758-44f9281092ff.png)
+![Screenshot 2024-12-05 at 10.52.45 PM.png](attachment:20b893b4-0e39-4aff-81aa-9e4cb124d861.png)
+![Screenshot 2024-12-05 at 10.53.40 PM.png](attachment:338f7307-8696-4a42-b5a5-27441da3b75a.png)
+![Screenshot 2024-12-05 at 10.54.22 PM.png](attachment:5abbd886-46c3-40bd-828e-960e32438e25.png)
 
 
