@@ -21,44 +21,43 @@ Feature Analysis: features are independent variables used in the model.
 Libraries:
 
 Model Evaluation, Feature Ranking and Analysis:
-!pip install pydotplus
-#Import libraries
+1)!pip install pydotplus
 
-import pandas as pd
-import numpy as np
+2)import pandas as pd
+3)import numpy as np
 
 Needed for Decision Tree Visualization
-import pydotplus
-from IPython.display import Image
+4)import pydotplus
+5)from IPython.display import Image
 
 Needed for Logistic Regression and Decision Tree Models
-from pathlib import Path
-from sklearn import tree
-from sklearn.tree import export_graphviz
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_auc_score
-from imblearn.over_sampling import SMOTE
-from sklearn.utils.class_weight import compute_class_weight
-from sklearn.preprocessing import MinMaxScaler,StandardScaler
-from sklearn.linear_model import LogisticRegression 
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.datasets import load_iris (used for decision tree visualization)
+6)from pathlib import Path
+7)from sklearn import tree
+8)from sklearn.tree import export_graphviz
+9)from sklearn.datasets import make_classification
+10)from sklearn.model_selection import train_test_split, cross_val_score
+11)from sklearn.ensemble import RandomForestClassifier
+12)from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_auc_score
+13)from imblearn.over_sampling import SMOTE
+14)from sklearn.utils.class_weight import compute_class_weight
+15)from sklearn.preprocessing import MinMaxScaler,StandardScaler
+16)from sklearn.linear_model import LogisticRegression 
+17)from sklearn.tree import DecisionTreeClassifier
+18)from sklearn.datasets import load_iris (used for decision tree visualization)
 %matplotlib inline
 
 import matplotlib.pyplot as plt
 from sklearn.tree import plot_tree
 
 Machine Learning Library and Visualizations
-from yellowbrick.features import Rank1D
-from yellowbrick.features import Rank2D 
-from yellowbrick.features import ParallelCoordinates
-from yellowbrick.classifier import ClassificationReport
-from yellowbrick.features import RadViz
-from yellowbrick.features import JointPlotVisualizer
-from yellowbrick.features import PCADecomposition
-from yellowbrick.features import FeatureImportances
+19)from yellowbrick.features import Rank1D
+20)from yellowbrick.features import Rank2D 
+21)from yellowbrick.features import ParallelCoordinates
+22)from yellowbrick.classifier import ClassificationReport
+23)from yellowbrick.features import RadViz
+24)from yellowbrick.features import JointPlotVisualizer
+25)from yellowbrick.features import PCADecomposition
+26)from yellowbrick.features import FeatureImportances
 
 
 Data Visualization: creating graphs and other visualizations to show the logistic and decision tree models/features.
