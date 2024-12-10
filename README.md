@@ -1,4 +1,4 @@
-# student_predictor
+# Student Predictor 
 
 Project Purpose
 
