@@ -1,68 +1,134 @@
-# Student Success Predictor 
+# Student Success Predictor
 
-## Overview:
+## Overview
+A machine learning project that predicts academic achievement in Portuguese secondary education (high school) by analyzing external factors that influence student performance. The project focuses on two core subjects:
+- Mathematics
+- Portuguese Language
 
-The purpose of this project is to predict academic achievement in secondary education(high school) of two Portuguese schools. This project explores the external factors that may support or hinder academic achievement.
+The analysis is based on comprehensive datasets from two Portuguese schools, incorporating student grades, demographic information, and social factors collected through school reports and questionnaires.
 
+## Data Source
+The dataset is sourced from the UCI Machine Learning Repository (December 2024) and was originally analyzed by Cortez and Silva (2008). 
 
-The data attributes include student grades, demographic, social and school related features) and was collected by using school reports and questionnaires. Two datasets are provided regarding the performance in two distinct subjects: Mathematics (mat) and Portuguese language (por). In [Cortez and Silva, 2008], the two datasets were modeled under binary/five-level classification and regression tasks. Important note: the target attribute G3 has a strong correlation with attributes G2 and G1. This occurs because G3 is the final year grade (issued at the 3rd period), while G1 and G2 correspond to the 1st and 2nd period grades. It is more difficult to predict G3 without G2 and G1, but such prediction is much more useful (see paper source for more details).(UCI, December 2024.)
+### Important Note About Grades
+The target variable G3 (final grade) shows strong correlation with G1 (first period) and G2 (second period) grades. While including G1 and G2 improves prediction accuracy, predicting G3 without these intermediate grades provides more practical value for early intervention.
+
+## Features
+The dataset includes multiple categories of predictive features:
+- Student Demographics
+- Family Background
+- Academic History
+- Social Factors
+- School-Related Variables
+
+*Note: Detailed variable descriptions and screenshots from UCI will be added upon availability*
 
 ## Methodology
 
-Machine Learning:using machine learning models to analyze historical data. This allows data professionals to predict or make decisions without knowing the final outcome. Academic Achievement (project) will use the logistic regression and decision tree models.
+### Machine Learning Approach
+The project implements two primary models:
+1. Logistic Regression
+   - Establishes linear relationships between features and academic outcomes
+   - Suitable for binary classification of student success
+   
+2. Decision Tree Classification
+   - Hierarchical decision-making structure
+   - Components:
+     - Root Node: Initial dataset split
+     - Internal Nodes: Feature-based decisions
+     - Branches: Decision pathways
+     - Leaf Nodes: Final predictions
 
-Model Analysis:Logistic regression-using features, it applies a linear relationship between features (independent variables) and targets.
+### Feature Analysis
+- Comprehensive feature ranking and importance assessment
+- Correlation analysis between predictors
+- Feature selection based on statistical significance
 
-Decision Tree: Root Nodes: entire dataset and splits based on feature significance. Internal Nodes: decision based on features and decision splits the dataset into smaller subsets. Branches: connect nodes and showcase the outcomes. Leaf nodes: terminal node to the final prediction.
+## Technical Implementation
 
-Feature Analysis: features are independent variables used in the model.
+### Required Libraries
 
-## Libraries
-
-Model Evaluation, Feature Ranking and Analysis:
-1)!pip install pydotplus
-
-2)import pandas as pd
-3)import numpy as np
-
-Needed for Decision Tree Visualization
-4)import pydotplus
-5)from IPython.display import Image
-
-Needed for Logistic Regression and Decision Tree Models
-6)from pathlib import Path
-7)from sklearn import tree
-8)from sklearn.tree import export_graphviz
-9)from sklearn.datasets import make_classification
-10)from sklearn.model_selection import train_test_split, cross_val_score
-11)from sklearn.ensemble import RandomForestClassifier
-12)from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_auc_score
-13)from imblearn.over_sampling import SMOTE
-14)from sklearn.utils.class_weight import compute_class_weight
-15)from sklearn.preprocessing import MinMaxScaler,StandardScaler
-16)from sklearn.linear_model import LogisticRegression 
-17)from sklearn.tree import DecisionTreeClassifier
-18)from sklearn.datasets import load_iris (used for decision tree visualization)
-%matplotlib inline
-
+#### Core Data Processing
+```python
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.tree import plot_tree
+%matplotlib inline
+```
 
-Machine Learning Library and Visualizations
-19)from yellowbrick.features import Rank1D
-20)from yellowbrick.features import Rank2D 
-21)from yellowbrick.features import ParallelCoordinates
-22)from yellowbrick.classifier import ClassificationReport
-23)from yellowbrick.features import RadViz
-24)from yellowbrick.features import JointPlotVisualizer
-25)from yellowbrick.features import PCADecomposition
-26)from yellowbrick.features import FeatureImportances
+#### Model Implementation
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split, cross_val_score
+```
 
+#### Model Evaluation
+```python
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    roc_auc_score
+)
+```
 
-Data Visualization: creating graphs and other visualizations to show the logistic and decision tree models/features.
+#### Data Enhancement
+```python
+from imblearn.over_sampling import SMOTE
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+```
 
-Dataset Variables
-Can someone include screenshots from the UCI website about the variables? website:https://archive.ics.uci.edu/dataset/320/student+performance
+#### Visualization Tools
+```python
+from yellowbrick.features import (
+    Rank1D,
+    Rank2D,
+    ParallelCoordinates,
+    RadViz,
+    JointPlotVisualizer,
+    PCADecomposition,
+    FeatureImportances
+)
+from yellowbrick.classifier import ClassificationReport
+```
 
+#### Decision Tree Visualization
+```python
+import pydotplus
+from IPython.display import Image
+from sklearn.tree import export_graphviz, plot_tree
+```
+
+## Project Structure
+```
+student-success-predictor/
+├── data/
+│   ├── student-mat.csv      # Mathematics performance dataset
+│   └── student-por.csv      # Portuguese language dataset
+├── notebooks/
+│   ├── data_preparation.ipynb
+│   ├── exploratory_analysis.ipynb
+│   └── model_development.ipynb
+├── src/
+│   ├── features/
+│   ├── models/
+│   └── visualization/
+└── README.md
+```
+
+## Getting Started
+1. Clone the repository
+2. Install required packages: `pip install -r requirements.txt`
+3. Run Jupyter notebooks in the `notebooks/` directory
+
+## Future Improvements
+- Implementation of additional machine learning models
+- Feature engineering for improved prediction accuracy
+- Development of a web interface for real-time predictions
+
+## References
+- Original paper: Cortez and Silva (2008)
+- Dataset: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/320/student+performance)
 
 
